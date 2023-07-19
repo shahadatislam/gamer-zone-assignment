@@ -64,6 +64,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    padding: 1rem;
 }
 
 .btn-follow {
@@ -73,7 +74,7 @@ body {
 }
 
 .btn-follow .youtube {
-    width: 2rem;
+    width: 1.75rem;
     height: 1.5rem;
     color: #F61C0D;
     margin-left: 10px;
@@ -82,6 +83,7 @@ body {
 .btn-follow .tiktok {
     width: 1.5rem;
     height: 1.5rem;
+    margin-left: 5px;
 }
 
 /* banner styles */
@@ -158,6 +160,55 @@ body {
     margin: 2.5rem 0 0 1.5rem;
 }
 
+/* online games section styles */
+
+.online-games {
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.online-games-content {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.online-games-title {
+    color: #0B0223;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.funny-videos-title {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.common-description {
+    color: #534C64;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.online-videos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.card-img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.videio-description {
+    color: #534C64;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 
 
 
@@ -207,6 +258,22 @@ body {
         margin: 2.5rem 0 0 0;
     }
 
+    .online-videos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .online-games-content {
+        padding: 1rem;
+    }
+
+    .online-games-title {
+        font-size: 2rem;
+    }
+
+    .videos-card {
+        padding: 1rem;
+    }
+
 }
 
 /* tablet devices */
@@ -234,22 +301,27 @@ body {
     }
 
     .banner-title-one {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .banner-title-two {
-        font-size: 3.5rem;
+        font-size: 5rem;
     }
 
-    .btn-primary {
-        font-size: 1rem;
-        padding: 1rem 2rem;
-
+    .online-videos-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .btn-secondary {
-        font-size: 1rem;
-        padding: 1rem 2rem;
-        margin: 2.5rem 0 0 0;
+    .online-games-content {
+        padding: 1rem;
     }
+
+    .online-games-title {
+        font-size: 3rem;
+    }
+
+    .videos-card {
+        padding: 1rem;
+    }
+
 }
