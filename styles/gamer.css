@@ -100,6 +100,9 @@ body {
 }
 
 /* banner styles */
+header {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
 
 .banner-container {
     max-width: 1200px;
@@ -109,7 +112,6 @@ body {
     display: flex;
     align-items: center;
     gap: 4rem;
-    background-color: #FFF;
 }
 
 .banner-content {
@@ -174,6 +176,10 @@ body {
 }
 
 /* online games section styles */
+
+main {
+    background-color: #FFF;
+}
 
 .online-games {
     max-width: 1200px;
@@ -258,12 +264,17 @@ body {
 }
 
 /* games section styles */
+.game-section {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    padding: 1rem 0;
+}
 
 .games {
 
     max-width: 1200px;
     margin: 130px auto;
 }
+
 
 .games-container {
     display: grid;
