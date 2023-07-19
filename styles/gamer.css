@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
 }
 
 .logo-container {
@@ -75,10 +76,28 @@ body {
     width: 2rem;
     height: 1.5rem;
     color: #F61C0D;
-    margin-left: 1rem;
+    margin-left: 18px;
 }
 
 .btn-follow .tiktok {
     width: 1.5rem;
     height: 1.5rem;
 }
+
+
+
+
+/* media queries style */
+
+/* mobile devices */
+@media screen and (max-width:576px) {
+
+    .nav-container,
+    .logo-container,
+    .nav-items-container {
+        flex-direction: column;
+    }
+}
+
+/* tablet devices */
+@media screen and (min-width:577px) and (max-width:960px) {}
