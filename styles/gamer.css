@@ -54,7 +54,7 @@ body {
 .nav-items-container {
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 3rem;
 }
@@ -76,13 +76,88 @@ body {
     width: 2rem;
     height: 1.5rem;
     color: #F61C0D;
-    margin-left: 18px;
+    margin-left: 10px;
 }
 
 .btn-follow .tiktok {
     width: 1.5rem;
     height: 1.5rem;
 }
+
+/* banner styles */
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background-color: #FFF;
+}
+
+.banner-content {
+    width: 50%;
+    min-height: 100px;
+
+}
+
+.banner-title-one {
+    color: #0B0223;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.banner-title-two {
+    font-size: 5.5rem;
+    font-weight: 800;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.banner-description {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.banner-img {
+    width: 50%;
+    min-height: 100px;
+}
+
+.banner-img img {
+    width: 100%;
+}
+
+.btn-primary {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 21px 40px;
+    border: 0;
+    border-radius: 48px;
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+}
+
+.btn-secondary {
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.25rem 2.5rem;
+    border: 0;
+    border-radius: 3rem;
+    background: #4EC5F7;
+    margin: 2.5rem 0 0 1.5rem;
+}
+
 
 
 
@@ -97,7 +172,84 @@ body {
     .nav-items-container {
         flex-direction: column;
     }
+
+    .banner-container {
+        flex-direction: column-reverse;
+    }
+
+    .banner-content,
+    .banner-img {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .banner-content {
+        padding: 4rem;
+    }
+
+    .banner-title-one {
+        font-size: 2rem;
+    }
+
+    .banner-title-two {
+        font-size: 3.5rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin: 2.5rem 0 0 0;
+    }
+
 }
 
 /* tablet devices */
-@media screen and (min-width:577px) and (max-width:960px) {}
+@media screen and (min-width:577px) and (max-width:960px) {
+
+    .nav-container,
+    .logo-container,
+    .nav-items-container {
+        flex-direction: column;
+    }
+
+    .banner-container {
+        flex-direction: column-reverse;
+    }
+
+    .banner-content,
+    .banner-img {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .banner-content {
+        padding: 4rem;
+        text-align: center;
+    }
+
+    .banner-title-one {
+        font-size: 2rem;
+    }
+
+    .banner-title-two {
+        font-size: 3.5rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin: 2.5rem 0 0 0;
+    }
+}
