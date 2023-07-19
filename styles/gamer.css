@@ -1,4 +1,7 @@
-/* common styles */
+/* ------------------------------
+         common styles 
+--------------------------------*/
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -26,9 +29,22 @@ body {
     color: #FF42A5;
 }
 
-/* header styles */
 
-/* nav styles */
+
+/*--------------------------------------
+               header styles
+ --------------------------------------- */
+
+
+header {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+
+
+/*---------------------------------------
+                nav styles
+ ----------------------------------------- */
+
 
 .nav-section {
     background-color: #FFF;
@@ -99,10 +115,12 @@ body {
     margin-left: 5px;
 }
 
-/* banner styles */
-header {
-    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
-}
+
+
+/* ------------------------------------------
+               banner styles 
+--------------------------------------------*/
+
 
 .banner-container {
     max-width: 1200px;
@@ -175,7 +193,14 @@ header {
     margin: 2.5rem 0 0 1.5rem;
 }
 
-/* online games section styles */
+
+
+
+/*-----------------------------------------
+      online games section styles
+ ------------------------------------------ */
+
+
 
 main {
     background-color: #FFF;
@@ -256,7 +281,13 @@ main {
 }
 
 
-/* play instant section styles */
+
+
+/*--------------------------------------------------
+        play instant section styles
+---------------------------------------------------- */
+
+
 
 .play-instant {
     max-width: 1200px;
@@ -301,7 +332,13 @@ main {
     top: -100px;
 }
 
-/* games section styles */
+
+
+/*----------------------------------------
+         games section styles 
+------------------------------------------*/
+
+
 .game-section {
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
     padding: 1rem 0;
@@ -322,21 +359,21 @@ main {
 }
 
 .padding-left {
-    padding-left: 4rem;
+    padding-left: 3rem;
 }
 
-
 .games-card {
+    outline: 1px solid transparent;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     margin-left: 2rem;
 }
 
 .games-card:hover {
-    border: 1px solid #FF42A5;
+    outline: 1px solid #FF42A5;
     border-radius: 50px;
-    padding-left: 16px;
     background: #FFF;
 }
 
@@ -350,10 +387,14 @@ main {
     width: 50%;
     color: #0B0223;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
-/* footer section styles */
+/* ---------------------------------
+    footer section styles 
+-----------------------------------*/
+
+
 footer {
     background-color: #0B0223;
 }
@@ -432,16 +473,29 @@ footer {
 
 
 
-/* media queries style */
+/*---------------------------------------
+        media queries style
+----------------------------------------- */
 
-/* mobile devices */
+
+/*-----------------------------------------
+          mobile devices
+ ------------------------------------------ */
+
+
+
 @media screen and (max-width:576px) {
+
+    /*---------------------- nav responsive------------------ */
 
     .nav-container,
     .logo-container,
     .nav-items-container {
         flex-direction: column;
     }
+
+
+    /*------------------- banner responsive--------------- */
 
     .banner-container {
         flex-direction: column-reverse;
@@ -478,6 +532,9 @@ footer {
         margin: 2.5rem 0 0 0;
     }
 
+
+    /*--------------- online video section responsive -------------*/
+
     .online-videos-container {
         grid-template-columns: 1fr;
     }
@@ -490,6 +547,7 @@ footer {
         font-size: 2rem;
     }
 
+
     .videos-card {
         padding: 1rem;
     }
@@ -501,6 +559,8 @@ footer {
         left: 170px;
         display: none;
     }
+
+    /*--------------- play instant section responsive------------ */
 
     .play-instant-content {
         width: 100%;
@@ -536,6 +596,9 @@ footer {
         left: 30px;
     }
 
+
+    /*-------------------- games section responsive---------------- */
+
     .games {
         margin: 0;
     }
@@ -554,13 +617,20 @@ footer {
         margin: 0;
     }
 
-    .games-card:hover {
-        border: 1px solid #FF42A5;
-        border-radius: 50px;
-        background: #FFF;
-        padding: 0 10px;
+    .games-title {
+        font-size: 10px;
+        font-weight: 500;
     }
 
+    .games-card:hover {
+        outline: 1px solid #FF42A5;
+        border-radius: 50px;
+        background: #FFF;
+
+    }
+
+
+    /*---------------- footer responsive-------------------*/
 
     .footer-container {
         padding: 50px;
@@ -589,14 +659,24 @@ footer {
 
 }
 
-/* tablet devices */
+
+
+/*-------------------------------------
+         tablet devices
+--------------------------------------*/
+
 @media screen and (min-width:577px) and (max-width:960px) {
+
+    /*-----------------nav responsive--------------- */
 
     .nav-container,
     .logo-container,
     .nav-items-container {
         flex-direction: column;
     }
+
+
+    /*--------------- banner responsive--------- */
 
     .banner-container {
         flex-direction: column-reverse;
@@ -621,6 +701,9 @@ footer {
         font-size: 5rem;
     }
 
+
+    /*------------ online videos section responsive--------- */
+
     .online-videos-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -644,6 +727,9 @@ footer {
         left: 145px;
         display: none;
     }
+
+
+    /*----------- play instant section responsive-------- */
 
     .play-instant-container {
         flex-direction: column;
@@ -682,6 +768,9 @@ footer {
         top: -140px;
     }
 
+
+    /*-------------- games section responsive------------ */
+
     .games {
         margin: 0;
         padding: 1rem;
@@ -701,12 +790,19 @@ footer {
         margin: 0;
     }
 
+    .games-title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
     .games-card:hover {
-        border: 1px solid #FF42A5;
+        outline: 1px solid #FF42A5;
         border-radius: 50px;
         background: #FFF;
-        padding: 0 16px;
     }
+
+
+    /*------------- footer responsive--------------- */
 
     .footer-container {
         padding: 50px;
