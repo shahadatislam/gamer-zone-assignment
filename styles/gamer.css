@@ -35,11 +35,9 @@ body {
                header styles
  --------------------------------------- */
 
-
 header {
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
 }
-
 
 /*---------------------------------------
                 nav styles
@@ -135,7 +133,6 @@ header {
 .banner-content {
     width: 50%;
     min-height: 100px;
-
 }
 
 .banner-title-one {
@@ -252,7 +249,7 @@ main {
 .watch-now-text {
     margin-top: 10px;
     color: #F948B2;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .card-img {
@@ -260,7 +257,19 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.videio-description {
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    transition: opacity 0.1s ease-in-out;
+    background-color: black;
+    cursor: pointer;
+}
+
+.video-description {
     color: #534C64;
     font-size: 20px;
     font-weight: 500;
@@ -270,14 +279,14 @@ main {
 .card-img:hover {
     border: 4px solid #FF42A5;
     border-radius: 16px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
-    display: inline;
-
-
 }
 
 .videos-card:hover .watch-now {
     display: inline;
+}
+
+.videos-card:hover .overlay {
+    opacity: 0.7;
 }
 
 
@@ -352,27 +361,30 @@ main {
 
 
 .games-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
 
 }
 
-.padding-left {
-    padding-left: 3rem;
+.margin-left {
+    margin-left: 3rem;
 }
 
 .games-card {
-    outline: 1px solid transparent;
+    width: 200px;
+    outline: 2px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-left: 2rem;
+    padding: 0 5px;
 }
 
 .games-card:hover {
-    outline: 1px solid #FF42A5;
+    outline: 2px solid #FF42A5;
     border-radius: 50px;
     background: #FFF;
 }
@@ -401,7 +413,7 @@ footer {
 
 .footer-container {
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 100px auto 0;
     padding: 120px 200px;
 }
 
@@ -474,7 +486,7 @@ footer {
 
 
 /*---------------------------------------
-        media queries style
+        media queries styles
 ----------------------------------------- */
 
 
@@ -492,6 +504,10 @@ footer {
     .logo-container,
     .nav-items-container {
         flex-direction: column;
+    }
+
+    .nav-items-container {
+        margin-bottom: 30px;
     }
 
 
@@ -604,17 +620,18 @@ footer {
     }
 
     .games-container {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        padding: 10px;
+        padding: 0 10px;
     }
 
-    .padding-left {
-        padding: 0;
+    .margin-left {
+        margin-left: 0;
     }
 
     .games-card {
-        margin: 0;
+        width: 100%;
     }
 
     .games-title {
@@ -623,7 +640,7 @@ footer {
     }
 
     .games-card:hover {
-        outline: 1px solid #FF42A5;
+        outline: 2px solid #FF42A5;
         border-radius: 50px;
         background: #FFF;
 
@@ -665,7 +682,7 @@ footer {
          tablet devices
 --------------------------------------*/
 
-@media screen and (min-width:577px) and (max-width:960px) {
+@media screen and (min-width:577px) and (max-width:768px) {
 
     /*-----------------nav responsive--------------- */
 
@@ -673,6 +690,10 @@ footer {
     .logo-container,
     .nav-items-container {
         flex-direction: column;
+    }
+
+    .nav-items-container {
+        margin-bottom: 30px;
     }
 
 
@@ -782,7 +803,7 @@ footer {
         padding: 1rem;
     }
 
-    .padding-left {
+    .margin-left {
         padding: 0;
     }
 
@@ -796,7 +817,7 @@ footer {
     }
 
     .games-card:hover {
-        outline: 1px solid #FF42A5;
+        outline: 2px solid #FF42A5;
         border-radius: 50px;
         background: #FFF;
     }
